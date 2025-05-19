@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="Haaland.js" defer></script>
+    <script src="Shein.js" defer></script>
+    <script src="ProfReady.js" defer></script>
+    <script src="Ikegai.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Профориентационное тестирование от студентов МПГУ</h1>
+    <form id="HaalandTest">
+        <h2>Модуль 1. Определение профессионального типа (по мотивам Климова и Холланда)</h2>
+        <p class="instructions">
+            Инструкция: в каждом вопросе выбери тот вариант, который 
+            тебе больше по душе. Категория в конце у которой будет наибольший 
+            результат - ваша ведущая профессиональная сфера
+        </p>
+
+        <div class="question">
+            <p>1. Что тебе интереснее?</p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="CH"> Работать с людьми 
+                    (социальные профессии)</label>
+                <label><input type="radio" name="q1" value="T"> Работать с приборами, 
+                    машинами</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Что больше нравится?</p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="ZS"> Создавать рисунки, фото, видео</label>
+                <label><input type="radio" name="q2" value="b"> Анализировать таблицы и отчёты</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Тебя вдохновляет...</p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="P"> Исследовать животных и природу</label>
+                <label><input type="radio" name="q3" value="PR"> Управлять командой, организовывать проекты</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Какой предмет тебе ближе?</p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="P"> Биология</label>
+                <label><input type="radio" name="q4" value="ZS"> Информатика</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Что больше подходит?</p>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="CH"> Помогать людям</label>
+                <label><input type="radio" name="q5" value="T"> Чинить или проектировать устройства</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. Что больше мотивирует?</p>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="HO"> Самовыражение и творчество</label>
+                <label><input type="radio" name="q6" value="PR"> Успех, влияние, лидерство</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. Какая деятельность интереснее?</p>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="HO"> Писать статьи, вести блог</label>
+                <label><input type="radio" name="q7" value="ZS"> Работать с документами и данными</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. Какая профессия тебе ближе?</p>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="CH"> Врач</label>
+                <label><input type="radio" name="q8" value="T"> Инженер</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. Что бы ты выбрал?</p>
+            <div class="answers">
+                <label><input type="radio" name="q9" value="P"> Работа с растениями, животными</label>
+                <label><input type="radio" name="q9" value="ZS"> Бухгалтерия, финансы</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. Что тебе проще?</p>
+            <div class="answers">
+                <label><input type="radio" name="q10" value="HO"> Придумать новое</label>
+                <label><input type="radio" name="q10" value="PR"> Реализовать готовое</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Показать результат</button>
+
+        <div id="resultHaaland" class="resultHaaland" style="display: none;"></div>
+    </form>
+
+    <form id="SheinTest">
+        <h2>Модуль 2. Ценности и карьерная мотивация (по мотивам Шейна)</h2>
+        <p class="instructions">
+            Инструкция: оцените, насколько вы согласны с каждым утверждением по шкале:
+            1 — совсем не важно, 5 — очень важно
+        </p>
+
+        <div class="question">
+            <label>1. Мне важно работать там, где стабильность и порядок <input type="number" name="q1" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>2. Я хочу, чтобы работа помогала другим людям <input type="number" name="q2" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>3. Мне важно быть творчески свободным <input type="number" name="q3" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>4. Хочу быть лидером и управлять процессами <input type="number" name="q4" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>5. Для меня важен карьерный рост <input type="number" name="q5" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>6. Я предпочитаю дружную атмосферу в коллективе <input type="number" name="q6" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>7. Хочу, чтобы моя работа имела смысл и приносила пользу миру <input type="number" name="q7" min="1" max="5" required></label>
+        </div>
+        <div class="question">
+            <label>8. Для меня важен престиж и признание <input type="number" name="q8" min="1" max="5" required></label>
+        </div>
+      
+        <button type="submit">Показать результат</button>
+
+        <div id="resultShein" class="resultShein" ></div>
+    </form>
+
+    <form id="ProfReadyTest">
+        <h2>Модуль 3. Готовность к профессиональному выбору</h2>
+        <p class="instructions">
+            Инструкция: ответьте на утверждения: «да», «скорее да», «скорее нет», «нет», отметьте ваш ответ в нужной колонке.
+        </p>
+
+        <div class="question">
+            <p>1. Я знаю, чем хочу заниматься в будущем</p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="Yes"> Да</label>
+                <label><input type="radio" name="q1" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q1" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q1" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Я изучал(а) разные профессии и карьерные пути</p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="Yes"> Да</label>
+                <label><input type="radio" name="q2" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q2" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q2" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Я умею планировать шаги к своей цели</p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="Yes"> Да</label>
+                <label><input type="radio" name="q3" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q3" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q3" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Мне легко принимать решения, касающиеся будущего</p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="Yes"> Да</label>
+                <label><input type="radio" name="q4" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q4" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q4" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Я могу аргументированно объяснить свой выбор другим</p>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="Yes"> Да</label>
+                <label><input type="radio" name="q5" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q5" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q5" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. Я чувствую уверенность в своих силах</p>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="Yes"> Да</label>
+                <label><input type="radio" name="q6" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q6" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q6" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. Я знаю, какие навыки мне нужно развивать</p>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="Yes"> Да</label>
+                <label><input type="radio" name="q7" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q7" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q7" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. Я понимаю, как устроен современный рынок труда</p>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="Yes"> Да</label>
+                <label><input type="radio" name="q8" value="ProbYes"> Скорее да</label>
+                <label><input type="radio" name="q8" value="ProbNo"> Скорее нет</label>
+                <label><input type="radio" name="q8" value="No"> Нет</label>
+            </div>
+        </div>
+
+        <button type="submit">Показать результат</button>
+
+        <div id="resultProfReady" class="resultProfReady"></div>
+    </form>
+
+    <form id="IkigaiTest">
+        <h2>Модуль 4. Личностный архетип (Икигай-упрощённый)</h2>
+        <p class="instructions">
+            Инструкция: выберите по одному варианту в каждом из четырёх блоков:
+        </p>
+
+        <div class="question">
+            <p>1. Что вам нравится делать больше всего?</p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="A"> а\ Объяснять, помогать людям</label>
+                <label><input type="radio" name="q1" value="B"> б\ Строить, чинить, проектировать</label>
+                <label><input type="radio" name="q1" value="C"> в\ Рисовать, петь, писать</label>
+                <label><input type="radio" name="q1" value="D"> д\ Считать, анализировать, искать решения</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Что у вас получается лучше других?</p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="A"> а\ Убедить, вдохновить</label>
+                <label><input type="radio" name="q2" value="B"> б\ Создать что-то руками</label>
+                <label><input type="radio" name="q2" value="C"> в\ Придумывать оригинальное</label>
+                <label><input type="radio" name="q2" value="D"> д\ Понимать сложные системы</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Что важно для мира по вашему мнению?</p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="A"> а\ Справедливость, забота</label>
+                <label><input type="radio" name="q3" value="B"> б\ Удобство, комфорт</label>
+                <label><input type="radio" name="q3" value="C"> в\ Эстетика, культура</label>
+                <label><input type="radio" name="q3" value="D"> д\ Развитие технологий</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. За что вам, скорее всего, будут платить?</p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="A"> а\ Консультации, помощь</label>
+                <label><input type="radio" name="q4" value="B"> б\ Создание продукта</label>
+                <label><input type="radio" name="q4" value="C"> в\ Услуги в сфере искусства</label>
+                <label><input type="radio" name="q4" value="D"> д\ IT, аналитика</label>
+            </div>
+        </div>
+
+        <button type="submit">Показать результат</button>
+
+        <div id="resultIkigai" class="resultIkigai"></div>
+    </form>
+</div>
+</body>
+</html>
